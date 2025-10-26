@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>my game: Error</title>
+                <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+ 
+if you see this, the game broke while loading.
+<br>     <br>
+        this may be a one-time error, if this is the case   <a href="game.html">click here</a>
+
+        <h3 id="errorInfo">error information here</h3>
+        <script>
+            let errorinformation = localStorage.getItem('errorMessage_mygame');
+
+            const errortext = document.getElementById("errorInfo");
+
+            errortext.innerHTML = `For the nerds out there, the code returned: ${errorinformation}`
+        </script>
+    </body>
+</html>

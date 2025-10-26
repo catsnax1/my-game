@@ -1,0 +1,189 @@
+#newsticker {
+    opacity: 1;
+transition: opacity 1s ease;
+}
+
+#newsticker:active {
+opacity: 0;
+}
+
+#mainbutton {
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+    background-color: black;
+    border: 5px solid white;
+    color: black;
+    transition: color 0.8s ease, transform 1s ease;
+    font-size: 50px;
+     font-family: 'Courier New', monospace;
+}
+
+#mainbutton:hover {
+    color: white;
+    transform: scale(1.05);
+    transition: transform 0.2s ease-out;
+}
+
+#mainbutton:active {
+    color: white;
+    transform: scale(0.95);
+}
+
+#expbutton {
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+    background-color: black;
+    border: 5px solid white;
+    color: black;
+    transition: color 0.8s ease, transform 1s ease, border-color 1s ease;
+    font-size: 50px;
+     font-family: 'Courier New', monospace;
+}
+
+#expbutton:hover {
+    color: white;
+    transform: scale(1.05);
+    transition: transform 0.2s ease-out;
+}
+
+#expbutton:active {
+    color: white;
+    transform: scale(0.95);
+}
+
+#expbutton:disabled {
+    color: black;
+    border-color: black;
+    background-color: white;
+    transform: scale(0.95);
+}
+
+#cpstext {
+    opacity: 0.2;
+    transition: opacity 1s ease;
+}
+
+#cpstext:hover {
+    opacity: 1;
+}
+
+#multitext {
+    opacity: 0.2;
+    transition: opacity 1s ease;
+}
+
+#multitext:hover {
+    opacity: 1;
+}
+
+#clickstext {
+    opacity: 0.2;
+    transition: opacity 1s ease;
+}
+
+#clickstext:hover {
+    opacity: 1;
+}
+
+body {
+  font-family: 'Courier New', monospace;
+    background-image: url("assets/background.jpeg")
+}
+
+button[id*="upgrade"] {
+        border: 5px solid white;
+    background-color: black;
+         filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+        border-radius: 50px;
+    color: white;
+    font-size: 15px;
+     font-family: 'Courier New', monospace;
+            transition: transform 1s ease, background-color 2s ease;
+}
+
+button[id*="upgrade"]:disabled {
+    background-color: gray;
+         filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+        border-radius: 50px;
+    color: white;
+    font-size: 15px;
+     font-family: 'Courier New', monospace;
+
+}
+
+button[class*="tabbutton"] {
+        border: 5px solid white;
+    background-color: black;
+         filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+        border-radius: 50px;
+    color: white;
+    font-size: 15px;
+     font-family: 'Courier New', monospace;
+    transition: transform 0.5s ease;
+}
+
+button[class*="tabbutton"]:active {
+    transform: scale(0.9);
+}
+
+button[class*="tabbutton"]:disabled {
+    background-color: gray;
+         filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+        border-radius: 50px;
+    color: white;
+    font-size: 15px;
+     font-family: 'Courier New', monospace;
+
+}
+
+button[id*="building"] {
+        border: 5px solid white;
+    background-color: black;
+         filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+        border-radius: 50px;
+    color: white;
+    font-size: 15px;
+     font-family: 'Courier New', monospace;
+        transition: transform 1s ease, background-color 2s ease;
+}
+
+button[id*="building"]:disabled {
+    background-color: gray;
+         filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+        border-radius: 50px;
+    color: white;
+    font-size: 15px;
+     font-family: 'Courier New', monospace;
+
+}
+
+button[id*="boughtbutton"] {
+    background-color: black;
+         filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+        border-radius: 50px;
+    color: white;
+    font-size: 15px;
+     font-family: 'Courier New', monospace;
+}
+
+button[id*="building"]:hover {
+    transform: scale(1.05);
+}
+
+button[id*="upgrade"]:hover {
+    transform: scale(1.05);
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

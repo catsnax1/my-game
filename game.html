@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>my game: Game</title>
+                <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        
+ <h3 id="newsticker">NEWSTICKER!!!</h3>
+<button id="mainbutton">Click</button>
+<p id="clickstext">e</p>
+<p id="cpstext">e</p>
+<p id="multitext">e</p>
+        <div class="tab">
+              <button class="tabbutton" onclick="openTab(event, 'nonbuildings')" id="defaultOpen">Upgrades</button>
+  <button class="tabbutton" onclick="openTab(event, 'buildings')">Buildings</button>
+  <button class="tabbutton" onclick="openTab(event, 'assists')" hidden id="assiststab">Assists</button>
+              <button class="tabbutton" onclick="openTab(event, 'exp')" hidden id="experiencetab">Experience</button>
+        </div>
+        <div id="nonbuildings" class="tabcontent">
+            <h2>Upgrades</h2>
+            <h3>Upgrades that preferrably boost MLT and cost CLK.</h3>
+            <button id="upgrade1">upgrade for a bajillion clicks to get +1 multiplier</button>
+            <br>
+            <button id="upgrade2" disabled=true>Buy Upgrade 1 First</button>
+            <br>
+                        <button id="upgrade3" disabled=true>Buy Upgrade 2 First</button>
+        </div>
+                <div id="buildings" class="tabcontent">
+            <h2>Buildings</h2>
+            <h3>Upgrades that preferrably boost CPS and cost CLK.</h3>
+            <button id="building1">upgrade for a bajillion clicks to get +1 cps</button>
+                                <br>
+            <button id="building2" disabled=true>Buy Building 1 First</button>
+        </div>
+                </div>
+                <div id="assists" class="tabcontent">
+            <h2>Assists</h2>
+            <h3 id="assistinfo">Locked.</h3>
+            <button id="assistupgrade1" disabled=true>Buy Upgrade 3 First</button>
+                                <br>
+        </div>
+                        <div id="exp" class="tabcontent">
+            <h2>Experience</h2>
+            <h3 id="expinfo">Locked.</h3>
+                            <p id="exptext">You have 1 bajillion EXP.</p>
+            <button id="expbutton" disabled=true>Buy Building 3 First</button>
+                                <br>
+        </div>
+               <script src="main.js"></script>
+            <input type="file" id="loadGameInput" accept=".json" style="display: none;">
+ 
+    </body>
+</html>
