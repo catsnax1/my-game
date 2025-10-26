@@ -1,4 +1,3 @@
-// variables
 window.onerror = function(message, source, lineno, colno, error) {
     let errorMessage = "An unknown error occurred.";
 
@@ -43,13 +42,8 @@ const newsquotes = [
   "And I thought this would be hard! Would be way easier if I didn't hardcode everything.."
 ];
 
-
-// wait for dom content
-
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // variables in the dom content
-    
+
     const clicksText = document.getElementById("clickstext");
     const multiText = document.getElementById("multitext");
     const mainButton = document.getElementById('mainbutton');
@@ -63,11 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const assistsinfo = document.getElementById('assistinfo');
     const assist1 = document.getElementById('assistupgrade1');
 
-
-
-    
-    // clicking the button
-    
     if (mainButton) {
         mainButton.addEventListener('click', function() {
 
@@ -75,11 +64,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     } else {
 
-        // send users to hell if the button isnt there
     }
 
-    // handle the upgrades and buildings
-    
     upgrade1.addEventListener('click', function() {
             if (clicks >= upgrade1cost) {
                 multiplier++ * multimultiplier
@@ -93,7 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
             };
         });
 
-        
     upgrade2.addEventListener('click', function() {
             if (clicks >= 100) {
                                 if (upgrade3) {
@@ -130,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 clicks = clicks - building1cost
                 building1cost = building1cost * 2
-                
+
             };
         });
 
@@ -156,49 +141,38 @@ document.addEventListener('DOMContentLoaded', function() {
         }); 
     }
 
-    
-
-    // constantly update the things that need updating
-
     const intervalId = setInterval(() => {
     clicksText.innerHTML = `CLK: ${clicks}`;
     multiText.innerHTML = `MLT: ${multiplier}`;
     upgrade1.innerHTML = `Get ${1 * multimultiplier} MLT for ${upgrade1cost} CLK`;
             if (upgrade3got === true) {
             assist1.innerHTML = `Remove the MAINBTN but 10x CPS and 2x MLT for ${assistscost} MLT`;
-            
+
         };
     building1.innerHTML = `Get 1 CPS for ${building1cost} CLK`;
     cpsText.innerHTML = `CPS: ${cps}`;
         exp = exp / (90 / explevel)
 }, 1);
 
-
-    // news ticker
     const newsticker = setInterval(() => {
-        
+
            var newstickerstring = Math.floor(Math.random() * 4);
            newstickertext.innerHTML = newsquotes[newstickerstring];
-    
 
-        
 }, 10000);
-
-    // cps
 
         const cpsfunc = setInterval(() => {
             clicks = clicks + cps   
-       
+
                                 if (upgrade2got) {
-                            
+
            multiplier = Math.log(multiplier + clicks) * 1.25
 
             }
-        
-}, 1000);
-    
-});
 
+}, 1000);
+
+});
 
 function openTab(event, tab) {
   var i, tabcontent, tablinks;
